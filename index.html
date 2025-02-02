@@ -1,0 +1,56 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Décrypte le code César!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Le Chiffrement de César</h1>
+    
+    <div class="intro">
+      <p>Bienvenue apprenti cryptographe! Le chiffrement de César est une des plus anciennes méthodes de cryptage.</p>
+      <p>Le principe est simple: on décale chaque lettre de l'alphabet d'un certain nombre de positions.</p>
+      <p>Par exemple, avec un décalage de 3:</p>
+      <p>A → D, B → E, C → F, etc.</p>
+    </div>
+
+    <div class="game-container">
+      <div class="level-indicator">
+        <h2>Niveau <span id="currentLevel">1</span>/3</h2>
+      </div>
+
+      <div class="challenge">
+        <h3>Message codé:</h3>
+        <p id="encodedMessage" class="message"></p>
+        
+        <div class="controls">
+          <label>Décalage:</label>
+          <div class="shift-controls">
+            <button id="decreaseShift">-</button>
+            <span id="currentShift">0</span>
+            <button id="increaseShift">+</button>
+          </div>
+        </div>
+
+        <div class="result">
+          <h3>Message décodé:</h3>
+          <p id="decodedMessage" class="message"></p>
+        </div>
+
+        <button id="checkAnswer" class="check-btn">Vérifier</button>
+      </div>
+    </div>
+
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <h2>Bravo!</h2>
+        <p id="modalMessage"></p>
+        <button id="nextLevel">Niveau suivant</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
